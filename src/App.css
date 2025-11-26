@@ -1,38 +1,183 @@
-.App {
-  text-align: center;
+@charset "utf-8";
+*{ margin: 0; padding: 0;}
+a{ text-decoration: none; color: inherit;}
+ol,ul{list-style: none;}
+#root{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#f0d4aa,#fff4e2);
+    text-align: center;
+    cursor: pointer;
+}
+/*app*/
+#app{
+    position: relative;
+    z-index: 1;
+    width: 360px;
+    height: 640px;
+    border: 3px solid #c7ab73;
+    box-shadow: 4px 4px 50px #8b684a;
+    border-radius: 1rem;
+    img{
+        width: 95px;
+        height: 95px;
+        margin: 1rem;
+    }
+    p.score-text{
+        position: relative;
+        font-size: 20px;
+        padding-left: 1.3rem;
+    }
+    p.score-text::before{
+        position: absolute;
+        content: "";
+        background-image: url(./img/score-icon.png);
+        width: 25px;
+        height: 25px;
+        left: 7rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background-size: cover;
+        background-position: center;
+        z-index: 10;
+    }
+}
+#app::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url(./img/img01.jpg);
+    background-size: cover;
+    background-position: center;
+    opacity: 0.3;
+    z-index: -1;
+    border-radius: 1rem;
+}
+#categories{
+    padding: 0.5rem;
+    h2{
+        color: #CD903B;
+        font-size: 40px;
+    }
+    p{
+        margin: 0.5rem;
+        padding: 5px;
+        font-size: 14px;
+        color: #555;
+    }
+    ul{
+        padding: 1rem;
+        li{
+            position: relative;
+            cursor: pointer;
+            margin: 1rem 0;
+            padding: 1rem;
+            border-radius: 1rem;
+            background-color: #F7E6CC;
+            border: 1px solid #E2C7A4;
+            color: #5A4636;
+            box-shadow: 0 3px 4px 0 ;
+            font-size: 25px;
+            &:hover{
+                color: #886b52;
+            }
+            &::before{
+                content: "";
+                position: absolute;
+                left: 3rem;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 35px;
+                height: 35px;
+                background-size: cover;
+                background-position: center;
+            }
+            &:nth-child(1)::before{
+                background-image: url(./img/icon01.png);
+            }
+            &:nth-child(2)::before{
+                background-image: url(./img/icon02.png);
+            }
+            &:nth-child(3)::before{
+                background-image: url(./img/icon03.png);
+            }
+            &:nth-child(4)::before{
+                background-image: url(./img/icon04.png);
+            }
+        }
+    }
+}
+#quiz-page{
+    position: relative;
+    h3{
+        font-size: 14px;
+        font-weight: lighter;
+    }
+    P{
+        font-size: 25px;
+        color: #B48458;
+        font-weight: bold;
+    }
+    ul{
+        padding: 1rem;
+        margin: 10px;
+        li{
+            margin: 1rem 0;
+            padding: 1rem;
+            font-size: 25px;
+            color: #5A4636;
+            background-color: #F7E6CC;
+            border: 1px solid #E2C7A4;
+            border-radius: 1rem;
+            box-shadow: 0 3px 4px 0 ;
+            &:hover{
+                color: #886b52;
+            }
+        }
+    }
+}
+#reault{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 55%;
+    gap: 10px;
+    h2{
+        font-size: 50px;
+        color: #EAAC65;
+        font-weight: 600;
+        text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+    }
+    p{
+        padding: 1rem;
+        font-size: 35px;
+        color: #B57833;
+    }
+    button{
+        margin: 1rem;
+        padding: 10px;
+        border-radius: 1.5rem;
+        font-size: 20px;
+        color: #3C2E22;
+        background-color: #F7E6CC;
+        border: 3px solid #E2C7A4;
+        cursor: pointer;
+        &:hover{
+            color:#B48458;
+        }
+    }
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@media all and (max-width:360px) {
+    #app{
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 0;
+    }
 }

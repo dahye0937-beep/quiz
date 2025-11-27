@@ -111,9 +111,12 @@ ol,ul{list-style: none;}
 }
 #quiz-page{
     position: relative;
+    padding: 1rem;
+    margin: 2rem;
     h3{
-        font-size: 14px;
+        font-size: 15px;
         font-weight: lighter;
+        padding: 10px;
     }
     P{
         font-size: 25px;
@@ -145,7 +148,7 @@ ol,ul{list-style: none;}
     justify-content: center;
     align-items: center;
     text-align: center;
-    height: 55%;
+    height: 60vh;
     gap: 10px;
     h2{
         font-size: 50px;

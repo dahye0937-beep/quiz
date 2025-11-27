@@ -31,7 +31,9 @@ const App = () => {
   }
   return (
     <div id='app'>
-      <img src={Main} alt="메인 상단 아이콘"/>
+      { !category && !finish &&(
+        <img src={Main} alt="메인 상단 아이콘"/>
+      )}
       {
         !category && !finish &&
         <Categorles

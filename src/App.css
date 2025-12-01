@@ -2,6 +2,9 @@
 *{ margin: 0; padding: 0;}
 a{ text-decoration: none; color: inherit;}
 ol,ul{list-style: none;}
+body{
+    font-family: 'Paperozi';
+}
 #root{
     height: 100vh;
     display: flex;

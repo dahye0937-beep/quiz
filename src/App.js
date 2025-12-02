@@ -56,7 +56,7 @@ const App = () => {
         }
         {
           category && !finish &&
-        <p className="score-text">현재 점수: {score}</p>
+        <p className="score-text">음식 점수: {score}</p>
         }
     </div>
   )
